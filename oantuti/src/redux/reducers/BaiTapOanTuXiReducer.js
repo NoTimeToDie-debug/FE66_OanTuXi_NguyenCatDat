@@ -4,7 +4,7 @@ const stateDefault = {
         { ma: 'bua', hinhAnh: './img/gameOanTuxi/bua.png', datCuoc: false },
         { ma: 'bao', hinhAnh: './img/gameOanTuxi/bao.png', datCuoc: false },
     ],
-    ketQua: "I'm iron man,i love you 3000 !!!",
+    ketQua: "I'm iron man, i love you 3000 !!!",
     soBanThang: 0,
     soBanChoi: 0,
     computer: { ma: 'keo', hinhAnh: './img/gameOanTuxi/keo.png' }
@@ -43,13 +43,13 @@ const BaiTapOanTuXiReducer = (state = stateDefault, action) => {
                     } else if (computer.ma === 'bua') {
                         state.ketQua = 'Thua sml !!!';
                     } else {
-                        state.ketQua = "I'm iron man,i love you 3000 !!!";
+                        state.ketQua = "I'm iron man, i love you 3000 !!!";
                         state.soBanThang += 1;
                     }
                     break;
                 case 'bua':
                     if (computer.ma === 'keo') {
-                        state.ketQua = "I'm iron man,i love you 3000 !!!";
+                        state.ketQua = "I'm iron man, i love you 3000 !!!";
                         state.soBanThang += 1;
                     } else if (computer.ma === 'bua') {
                         state.ketQua = 'Hòa nhau !!!';
@@ -61,14 +61,14 @@ const BaiTapOanTuXiReducer = (state = stateDefault, action) => {
                     if (computer.ma === 'keo') {
                         state.ketQua = 'Thua sml !!!';
                     } else if (computer.ma === 'bua') {
-                        state.ketQua = "I'm iron man,i love you 3000 !!!";
+                        state.ketQua = "I'm iron man, i love you 3000 !!!";
                         state.soBanThang += 1;
                     } else {
                         state.ketQua = 'Hòa nhau !!!';
                     }
                     break;
                     
-                    default : state.ketQua = "I'm iron man,i love you 3000 !!!";
+                    default : state.ketQua = "I'm iron man, i love you 3000 !!!";
                     state.soBanThang += 1;
                     
                     return {...state};
